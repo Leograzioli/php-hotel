@@ -56,7 +56,7 @@ $hotels = [
 <body>
     <section>
 
-    <h1>Hotel list:</h1>
+        <h1>Hotel list:</h1>
         <?php foreach ($hotels as $item) { ?>
             <div class="hotel">
                 <?php foreach ($item as $key => $hotel_info) { ?>
