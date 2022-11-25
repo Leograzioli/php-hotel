@@ -50,20 +50,23 @@ $hotels = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <section>
-       
-            <?php foreach ($hotels as $item) { ?> 
-                <div>
-                    <?php foreach ($item as $key => $hotel_info) { ?> 
-                        <p> <?php echo $key. " " . $hotel_info?></p>
-                    <?php } ?>
-                </div>
-            <?php } ?>
-       
 
+    <h1>Hotel list:</h1>
+        <?php foreach ($hotels as $item) { ?>
+            <div class="hotel">
+                <?php foreach ($item as $key => $hotel_info) { ?>
+                    <div class="flex">
+                        <h3> <?php echo ucfirst($key) . ":" ?></h3>
+                        <p><?php echo ucfirst($hotel_info) ?></p>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php } ?>
     </section>
 </body>
 
